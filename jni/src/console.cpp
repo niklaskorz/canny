@@ -80,7 +80,7 @@ Handle<Value> canny::console::trace(const Arguments& args) {
     return Undefined();
 }
 
-Handle<ObjectTemplate> canny::console::createConsoleObject() {
+Handle<ObjectTemplate> canny::console::createConsoleObjectTemplate() {
     Handle<ObjectTemplate> console = ObjectTemplate::New();
     console->Set(String::New("log"), FunctionTemplate::New(canny::console::debug));
     console->Set(String::New("debug"), FunctionTemplate::New(canny::console::debug));

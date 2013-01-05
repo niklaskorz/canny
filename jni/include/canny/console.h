@@ -4,7 +4,7 @@
 
 namespace canny {
     namespace console {
-        v8::Handle<v8::ObjectTemplate> createConsoleObject();
+        v8::Handle<v8::ObjectTemplate> createConsoleObjectTemplate();
     }
 }
 

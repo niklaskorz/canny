@@ -9,7 +9,7 @@ JNIEXPORT jlong JNICALL Java_de_niklaskorz_canny_ScriptContext_createNativeConte
     HandleScope handleScope;
 
     Handle<ObjectTemplate> global = ObjectTemplate::New();
-    global->Set(String::New("console"), createConsoleObject());
+    global->Set(String::New("console"), canny::console::createConsoleObjectTemplate());
 
     Persistent<Context> context = Context::New(NULL, global);
     return (jlong)(*context);
